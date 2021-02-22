@@ -8,12 +8,11 @@
 # Site: https://knaved.com
 # Version 0.1
 
-squid_user=
-squid_password=
+
 
 yum -y install squid httpd-tools
 
-htpasswd -b -c /etc/squid/passwd $squid_user $squid_password
+htpasswd -b -c /etc/squid/passwd admin admin123
 
 mv /etc/squid/squid.conf /etc/squid/squid.conf.bak
 touch /etc/squid/blacklist.acl
