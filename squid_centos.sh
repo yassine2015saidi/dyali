@@ -12,7 +12,7 @@
 
 yum -y install squid httpd-tools
 
-htpasswd -b -c /etc/squid/passwd admin admin123
+
 
 mv /etc/squid/squid.conf /etc/squid/squid.conf.bak
 touch /etc/squid/blacklist.acl
