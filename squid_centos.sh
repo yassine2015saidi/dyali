@@ -14,13 +14,6 @@ yum -y install squid httpd-tools
 
 
 
-mv /etc/squid/squid.conf /etc/squid/squid.conf.bak
-touch /etc/squid/blacklist.acl
-wget -O /etc/squid/squid.conf  https://raw.githubusercontent.com/khaledalhashem/squid/master/squid_centos.conf
-
-iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
-#/sbin/iptables-save
-/sbin/service iptables save
 
 systemctl restart squid
 systemctl enable squid
